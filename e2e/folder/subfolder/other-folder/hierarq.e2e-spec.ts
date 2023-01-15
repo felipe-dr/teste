@@ -1,0 +1,3 @@
+it('HIERARQ', () => {
+  expect('').toBe('');
+});

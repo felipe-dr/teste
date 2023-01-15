@@ -7,3 +7,4 @@ function abc() {
 }
 
 abc();
+abc();
