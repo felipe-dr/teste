@@ -1,3 +1,6 @@
+const { pathsToModuleNameMapper } = require('ts-jest');
+const { compilerOptions } = require('./tsconfig');
+
 module.exports = {
   roots: ['<rootDir>/src', '<rootDir>/e2e'],
   testMatch: ['**/*.(test|spec|e2e-test|e2e-spec).ts'],
@@ -7,8 +10,6 @@ module.exports = {
   transform: {
     '\\.ts$': 'ts-jest',
   },
-  moduleNameMapper: {
-    '@/(.+)': '<rootDir>/src/$1',
-    '@/e2e/(.+)': '<rootDir>/e2e/$1',
-  },
+  modulePaths: [compilerOptions.baseUrl],
+  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths),
 };

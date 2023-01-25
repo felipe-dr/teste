@@ -1,45 +1,29 @@
 {
   "compilerOptions": {
-    /* Projects */
     "incremental": true,
-
-    /* Language and Environment */
     "target": "es5",
-    "lib": [],
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-
-    /* Modules */
     "module": "commonjs",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    // "rootDir": "src",
     "rootDirs": ["src", "e2e"],
     "baseUrl": "src",
     "paths": {
       "@/*": ["*"],
       "@/e2e/*": ["../e2e/*"]
     },
-
-    /* JavaScript Support */
     "allowJs": true,
-
-    /* Emit */
     "outDir": "dist",
     "sourceMap": true,
     "removeComments": true,
-
-    /* Interop Constraints */
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-
-    /* Type Checking */
     "strict": true,
     "noImplicitOverride": true,
-
-    /* Completeness */
     "skipLibCheck": true
   },
-  "include": ["src", "e2e"]
+  "include": ["src", "e2e"],
+  "exclude": ["node_modules"]
 }
